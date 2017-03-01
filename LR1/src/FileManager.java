@@ -13,7 +13,7 @@ public class FileManager {
     boolean result;
 
     public void createFile() throws IOException {
-        System.out.println("Please, write a path and file name: ");
+        System.out.println("Please, input a path and file name: ");
         path = reader.readLine();
         File f = new File(path);
 
@@ -21,10 +21,13 @@ public class FileManager {
         if (result){
             System.out.println("File has been created");
         }
-        else System.out.println("File already exists");
-}
+        else {
+            System.out.println("File already exists");
+        }
+    }
+
     public void deleteFile() throws IOException {
-        System.out.println("Please, write a path and file name: ");
+        System.out.println("Please, input a path and file name: ");
         path = reader.readLine();
 
         File f = new File(path);
@@ -33,7 +36,9 @@ public class FileManager {
         if (result){
             System.out.println("File has been deleted");
         }
-        else System.out.println("File hasn't been found or can't be deleted");
+        else {
+            System.out.println("File hasn't been found or can't be deleted");
+        }
     }
 
     public void renameFile() {
