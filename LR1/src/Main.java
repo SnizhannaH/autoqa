@@ -2,9 +2,6 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-/**
- * Created by guber on 27.02.2017.
- */
 public class Main {
     public static void main(String[] args) throws IOException {
 
@@ -13,13 +10,13 @@ public class Main {
 
         FileManager fm = new FileManager();
 
-            System.out.println("Choose an action:");
-            System.out.println("1. Create File");
-            System.out.println("2. Delete File");
-            System.out.println("3. Rename File");
-            System.out.println("4. Find Word");
-            System.out.println("5. Replace Word");
-            System.out.println("0. Exit");
+        System.out.println("Choose an action:");
+        System.out.println("1. Create File");
+        System.out.println("2. Delete File");
+        System.out.println("3. Rename File");
+        System.out.println("4. Find Word");
+        System.out.println("5. Replace Word");
+        System.out.println("0. Exit");
 
         do {
             action = reader.readLine();
