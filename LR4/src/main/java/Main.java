@@ -16,6 +16,8 @@ public class Main {
         System.out.println("3. Rename File");
         System.out.println("4. Find Word");
         System.out.println("5. Replace Word");
+        System.out.println("6. Write Excel");
+        System.out.println("7. Read Excel");
         System.out.println("0. Exit");
 
         do {
@@ -42,6 +44,14 @@ public class Main {
 
                 case "5":
                     fm.replaceWord();
+                    break;
+
+                case "6":
+                    fm.writeExcel();
+                    break;
+
+                case "7":
+                    fm.readExcel();
                     break;
 
                 default:
