@@ -18,6 +18,9 @@ public class Main {
         System.out.println("5. Replace Word");
         System.out.println("6. Write Excel");
         System.out.println("7. Read Excel");
+        System.out.println("8. Find text/digit Excel");
+        System.out.println("9. Replace text/digit Excel - one cell");
+        System.out.println("10. Replace text/digit Excel - everywhere");
         System.out.println("0. Exit");
 
         do {
@@ -52,6 +55,18 @@ public class Main {
 
                 case "7":
                     fm.readExcel();
+                    break;
+
+                case "8":
+                    fm.findWordExcel();
+                    break;
+
+                case "9":
+                    fm.replaceWordExcel();
+                    break;
+
+                case "10":
+                    fm.replaceAllWordsExcel();
                     break;
 
                 default:
