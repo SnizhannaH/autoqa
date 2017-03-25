@@ -17,6 +17,7 @@ public class FileManager {
     BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
 
     public void createFile(String filePath) {
+
         if (interactive) {
             try {
                 filePath = pathInput();
@@ -36,14 +37,23 @@ public class FileManager {
         if (result) {
             System.out.println("File has been created");
         } else {
-            System.out.println("File already exists");
+            System.out.println("Incorrect path or file already exists");
         }
     }
 
-    public void deleteFile() throws IOException {
+    public void deleteFile(String filePath) {
+        if (interactive) {
+            try {
+                filePath = pathInput();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+
         boolean result;
 
-        File file = new File(pathInput());
+        File file = new File(filePath);
+
         result = file.delete();
 
         if (result) {
@@ -53,16 +63,22 @@ public class FileManager {
         }
     }
 
-    public void renameFile() throws IOException {
+    public void renameFile(String filePathOld, String filePathNew)  {
+        if (interactive) {
+            try {
+                filePathOld = pathInput();
+                System.out.println("Please, input a path and new file name: ");
+                filePathNew = pathInput();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+
         boolean result;
-        String pathNew;
 
-        File file = new File(pathInput());
-        System.out.println("Please, input a path and new file name: ");
-
-        pathNew = reader.readLine();
-        File fileNew = new File(pathNew);
-        result = file.renameTo(fileNew);
+            File file = new File(filePathOld);
+            File fileNew = new File(filePathNew);
+            result = file.renameTo(fileNew);
 
         if (result) {
             System.out.println("File has been renamed");

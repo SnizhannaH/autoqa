@@ -11,13 +11,14 @@ import static org.testng.Assert.assertEquals;
 public class SimpleTest {
 
     boolean interactive = false;
-    String createFilePath = "D:\\Projects\\test1.txt";
-    //String deleteFilePath = "/tmp/DeleteFileTest";
+    String createFilePath = "D:\\Projects\\test4.txt";
+    String deleteFilePath = "D:\\Projects\\test1.txt";
+    String renameFilePathOld = "D:\\Projects\\test2.txt";
+    String renameFilePathNew = "D:\\Projects\\test2new.txt";
+    //String createFilePathNegative = "D:\\Projesdfsfts\\test2.txt";
 
     @Parameters({"interactive"})
-    SimpleTest(boolean interactive) {
-        this.interactive = interactive;
-    }
+    SimpleTest(boolean interactive) { this.interactive = interactive; }
 
     @BeforeClass
     public void setUp() {
@@ -25,20 +26,39 @@ public class SimpleTest {
     }
 
     @Parameters({"myParam"})
-    @Test(groups = {"functest", "checkintest"})
-    public void testMethod1(String myParam) {
+    @Test(groups = {"gotParams", "runAll"})
+    public void getParams(String myParam) {
         System.out.println("I got a parameter: " + myParam);
     }
 
-    @Test(groups = {"functest", "checkintest"})
-    public void testMethod2() {
+    @Test(groups = {"createFile", "runAll"})
+    public void testCreateFile() {
         FileManager fileManager = new FileManager(interactive);
         fileManager.createFile(createFilePath);
         assertEquals(true, Files.exists(Paths.get(createFilePath)));
     }
 
-    @Test(groups = {"functest"})
-    public void testMethod3() {
+   @Test(groups = {"deleteFile", "runAll"})
+    public void testDeleteFile() throws  Exception {
+        FileManager fileManager = new FileManager(interactive);
+        assertEquals(true, Files.exists(Paths.get(deleteFilePath)));
+        fileManager.deleteFile(deleteFilePath);
+        assertEquals(false, Files.exists(Paths.get(deleteFilePath)));
     }
 
+    @Test(groups = {"renameFile", "runAll"})
+    public void testRenameFile() throws  Exception {
+        FileManager fileManager = new FileManager(interactive);
+        assertEquals(true, Files.exists(Paths.get(renameFilePathOld)));
+        fileManager.renameFile(renameFilePathOld, renameFilePathNew);
+        assertEquals(false, Files.exists(Paths.get(renameFilePathOld)));
+        assertEquals(true, Files.exists(Paths.get(renameFilePathNew)));
+    }
+
+//    @Test(expectedExceptions = {IOException.class})
+//    public void testCreateFileNegative() throws IOException {
+//        FileManager fileManager = new FileManager(interactive);
+//        fileManager.createFile(createFilePathNegative);
+//    }
 }
+
