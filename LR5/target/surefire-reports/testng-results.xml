@@ -2,21 +2,21 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Parallel test suite" duration-ms="31" started-at="2017-03-25T20:08:28Z" finished-at="2017-03-25T20:08:28Z">
+  <suite name="Parallel test suite" duration-ms="31" started-at="2017-04-05T19:36:21Z" finished-at="2017-04-05T19:36:21Z">
     <groups>
+      <group name="RenameFileNegative">
+        <method signature="SimpleTest.testRenameFileNegative()[pri:0, instance:SimpleTest@6be46e8f]" name="testRenameFileNegative" class="SimpleTest"/>
+      </group> <!-- RenameFileNegative -->
       <group name="runAll">
-        <method signature="SimpleTest.testCreateFile()[pri:0, instance:SimpleTest@68837a77]" name="testCreateFile" class="SimpleTest"/>
+        <method signature="SimpleTest.testRenameFileNegative()[pri:0, instance:SimpleTest@6be46e8f]" name="testRenameFileNegative" class="SimpleTest"/>
       </group> <!-- runAll -->
-      <group name="createFile">
-        <method signature="SimpleTest.testCreateFile()[pri:0, instance:SimpleTest@68837a77]" name="testCreateFile" class="SimpleTest"/>
-      </group> <!-- createFile -->
     </groups>
-    <test name="Test1" duration-ms="31" started-at="2017-03-25T20:08:28Z" finished-at="2017-03-25T20:08:28Z">
+    <test name="Test1" duration-ms="31" started-at="2017-04-05T19:36:21Z" finished-at="2017-04-05T19:36:21Z">
       <class name="SimpleTest">
-        <test-method status="PASS" signature="testCreateFile()[pri:0, instance:SimpleTest@68837a77]" name="testCreateFile" duration-ms="15" started-at="2017-03-25T22:08:28Z" finished-at="2017-03-25T22:08:28Z">
+        <test-method status="PASS" signature="testRenameFileNegative()[pri:0, instance:SimpleTest@6be46e8f]" name="testRenameFileNegative" duration-ms="16" started-at="2017-04-05T22:36:21Z" finished-at="2017-04-05T22:36:21Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testCreateFile -->
+        </test-method> <!-- testRenameFileNegative -->
       </class> <!-- SimpleTest -->
     </test> <!-- Test1 -->
   </suite> <!-- Parallel test suite -->

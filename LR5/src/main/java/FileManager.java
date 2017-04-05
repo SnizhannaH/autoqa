@@ -16,7 +16,7 @@ public class FileManager {
 
     BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
 
-    public void createFile(String filePath) {
+    public void createFile(String filePath) throws IOException{
 
         if (interactive) {
             try {
@@ -29,11 +29,13 @@ public class FileManager {
         boolean result = false;
 
         File file = new File(filePath);
-        try {
-            result = file.createNewFile();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+
+        result = file.createNewFile();
+//        try {
+//            result = file.createNewFile();
+//        } catch (IOException e) {
+//            e.printStackTrace();
+//        }
         if (result) {
             System.out.println("File has been created");
         } else {
@@ -41,7 +43,7 @@ public class FileManager {
         }
     }
 
-    public void deleteFile(String filePath) {
+    public void deleteFile(String filePath) throws IOException {
         if (interactive) {
             try {
                 filePath = pathInput();
