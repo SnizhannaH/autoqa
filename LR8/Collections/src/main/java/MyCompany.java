@@ -23,7 +23,7 @@ public class MyCompany {
     public void deleteEmployeeOlder(int desiredAge) {
         // TODO
         for (int i = 0; i < employeeList.size(); i++) {
-            if (employeeList.get(i).getAge()<desiredAge) {
+            if (employeeList.get(i).getAge()>desiredAge) {
                 employeeList.remove(i);
             }
         }
@@ -53,17 +53,16 @@ public class MyCompany {
     public void updateEmployeeName(String employeeName, String employeeNewName) {
         for (int i = 0; i < employeeList.size(); i++) {
             if (employeeList.get(i).getName().equals(employeeName)) {
-                employeeList.get(i).setProjectName(employeeNewName);
+                employeeList.get(i).setName(employeeNewName);
             }
         }
     }
 
-    public void clearProjectName(String employeeName, String projectName) {
+    public void clearProjectName(String employeeName) {
         for (int i = 0; i < employeeList.size(); i++) {
             if (employeeList.get(i).getName().equals(employeeName)) {
-                employeeList.get(i).setProjectName("");
+                employeeList.get(i).setProjectName(" ");
             }
         }
     }
-
 }

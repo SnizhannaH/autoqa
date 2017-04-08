@@ -37,4 +37,8 @@ public class Employee {
     public void setProjectName(String projectName) {
         this.projectName = projectName;
     }
+
+    public String toString() {
+        return this.name + " " + this.age + " " + this.projectName;
+    }
 }
