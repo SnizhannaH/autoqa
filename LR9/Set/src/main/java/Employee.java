@@ -41,19 +41,7 @@ public class Employee {
         this.projectName = projectName;
     }
 
-    public HashSet<String> getSkills() {
-        return skills;
-    }
-
-    public void setSkills(HashSet<String> skills) {
-        this.skills = skills;
-    }
-
-    public void addSkill(String skill) {
-        skills.add(skill);
-    }
-
-    public void removeSkill(String skill){
-        skills.remove(skill);
+    public String toString() {
+        return this.name + " " + this.age + " " + this.projectName + " " + "skills:" + this.skills;
     }
 }

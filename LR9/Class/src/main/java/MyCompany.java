@@ -10,7 +10,7 @@ public class MyCompany {
         return employeeList;
     }
 
-    public void addEmployee(String employeeName, int age, String projectName, HashSet<String> skills) {
+    public void addEmployee(String employeeName, int age, String projectName, ArrayList<Skill> skills) {
         employeeList.add(new Employee(employeeName, age, projectName, skills));
     }
 
@@ -37,9 +37,10 @@ public class MyCompany {
         for (int i = 0; i < employeeList.size(); i++) {
             if (employeeList.get(i).getName().equals(employeeName)) {
                 employeeToReturn = employeeList.get(i);
-            } else {
-                employeeToReturn = new Employee("Not found", 0, "Not found", new HashSet<String>(Arrays.asList("Not found")));
             }
+//            else {
+//                employeeToReturn = new Employee("Not found", 0, "Not found", new HashSet<String>(Arrays.asList("Not found")));
+//            }
         }
         return employeeToReturn;
     }

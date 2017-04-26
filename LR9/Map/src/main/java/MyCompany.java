@@ -1,6 +1,7 @@
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
+import java.util.HashSet;
 
 public class MyCompany {
 
@@ -14,6 +15,7 @@ public class MyCompany {
         employeeList.add(new Employee(employeeName, age, projectName, skills));
     }
 
+
     public void deleteEmployeeByName(String employeeName) {
         for (int i = 0; i < employeeList.size(); i++) {
             if (employeeList.get(i).getName().equals(employeeName)) {
@@ -25,7 +27,7 @@ public class MyCompany {
     public void deleteEmployeeOlder(int desiredAge) {
         // TODO
         for (int i = 0; i < employeeList.size(); i++) {
-            if (employeeList.get(i).getAge()<desiredAge) {
+            if (employeeList.get(i).getAge()>desiredAge) {
                 employeeList.remove(i);
             }
         }
@@ -51,14 +53,13 @@ public class MyCompany {
             if (employeeList.get(i).getName().equals(employeeName)) {
                 employeeList.get(i).setProjectName(projectName);
             }
-
         }
     }
 
     public void updateEmployeeName(String employeeName, String employeeNewName) {
         for (int i = 0; i < employeeList.size(); i++) {
             if (employeeList.get(i).getName().equals(employeeName)) {
-                employeeList.get(i).setProjectName(employeeNewName);
+                employeeList.get(i).setName(employeeNewName);
             }
         }
     }
@@ -66,31 +67,7 @@ public class MyCompany {
     public void clearProjectName(String employeeName) {
         for (int i = 0; i < employeeList.size(); i++) {
             if (employeeList.get(i).getName().equals(employeeName)) {
-                employeeList.get(i).setProjectName("");
-            }
-        }
-    }
-
-    public void addEmployeeSkill (String employeeName, String skill, String description) {
-        for (int i = 0; i < employeeList.size(); i++) {
-            if (employeeList.get(i).getName().equals(employeeName)) {
-                employeeList.get(i).addSkill(skill, description);
-            }
-        }
-    }
-
-    public void removeEmployeeSkill (String employeeName, String skill) {
-        for (int i = 0; i < employeeList.size(); i++) {
-            if (employeeList.get(i).getName().equals(employeeName)) {
-                employeeList.get(i).removeSkill(skill);
-            }
-        }
-    }
-
-    public void getEmployeeSkills (String employeeName) {
-        for (int i = 0; i < employeeList.size(); i++) {
-            if (employeeList.get(i).getName().equals(employeeName)) {
-                employeeList.get(i).getSkills();
+                employeeList.get(i).setProjectName(" ");
             }
         }
     }

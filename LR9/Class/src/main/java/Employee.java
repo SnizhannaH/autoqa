@@ -1,13 +1,13 @@
-import java.util.HashMap;
+import java.util.ArrayList;
 import java.util.HashSet;
 
 public class Employee {
     private String name;
     private int age;
     private String projectName;
-    private HashMap<String, String> skills = new HashMap<String, String>();
+    private ArrayList<Skill> skills = new ArrayList<>();
 
-    public Employee(String name, int age, String projectName, HashMap<String, String> skills) {
+    public Employee(String name, int age, String projectName, ArrayList<Skill> skills) {
         this.name = name;
         this.age = age;
         this.projectName = projectName;

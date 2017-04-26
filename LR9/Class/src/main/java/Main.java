@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashSet;
 
@@ -6,12 +7,28 @@ public class Main {
     public static void main(String[] args) {
 
         MyCompany myCompany = new MyCompany();
-        myCompany.addEmployee("Serj", 25, "Hillel", new HashSet<String>(Arrays.asList("skill1", "skill2")));
-        myCompany.addEmployee("Alex", 30, "Hillel", new HashSet<String>(Arrays.asList("skill1", "skill3")));
-        myCompany.addEmployee("Max", 33, "Hillel", new HashSet<String>(Arrays.asList("skill5", "skill6")));
-        myCompany.addEmployee("Ann", 25, "Hillel", new HashSet<String>(Arrays.asList("skill5", "skill6")));
-        myCompany.addEmployee("Alex", 30, "Hillel", new HashSet<String>(Arrays.asList("skill5")));
-        myCompany.addEmployee("Vika", 33, "Hillel", new HashSet<String>(Arrays.asList("skill5", "skill6", "skill7")));
+
+
+        myCompany.addEmployee("Serj", 25, "Hillel",  new ArrayList<Skill>() {{
+            add(new Skill("skill1","description1", 4));
+            add(new Skill("skill2","description2", 1));
+        }});
+        myCompany.addEmployee("Alex", 30, "Hillel", new ArrayList<Skill>() {{
+            add(new Skill("skill3","description3", 4));
+            add(new Skill("skill4","description4", 1));
+        }});
+        myCompany.addEmployee("Max", 33, "Hillel", new ArrayList<Skill>() {{
+            add(new Skill("skill1","description1", 4));
+            add(new Skill("skill2","description2", 10));
+            add(new Skill("skill3","description3", 7));
+        }});
+        myCompany.addEmployee("Ann", 25, "Hillel",  new ArrayList<Skill>() {{
+            add(new Skill("skill1","description1", 4));
+            add(new Skill("skill2","description2", 8));
+        }});
+        myCompany.addEmployee("Vika", 33, "Hillel",  new ArrayList<Skill>() {{
+            add(new Skill("skill3","description3", 9));
+        }});
 
         System.out.println("Employee data:");
         myCompany.getAllEmployees().forEach(System.out::println);
