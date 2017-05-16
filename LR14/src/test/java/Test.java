@@ -18,7 +18,7 @@ public class Test {
         loginPage
                 .open(Constants.uri)
                 .typeUsername("gubernatorova.sn")
-                .typePassword("55555555")
+                .typePassword("11111111")
                 .clickOnLoginButton();
 
         // Create new sub-task
@@ -27,7 +27,7 @@ public class Test {
                 .fillSummary("Snizhanna test7")
                 .clickSubmitButton();
 
-//        // Open and delete sub-task
+        // Open and delete sub-task
         newIssuePage
                 .openSubtask()
                 .clickMoreButton()
@@ -35,8 +35,8 @@ public class Test {
                 .deleteSubtask();
 
         //Drag and drop
-        boardPage.open()
-                 .dragAndDrop();
+        //boardPage.open()
+          //       .dragAndDrop();
 
 //        driver.quit(); .ghx-selected
     }

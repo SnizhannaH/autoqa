@@ -26,7 +26,7 @@ public class NewIssuePage {
     }
 
     public NewIssuePage openNewSubtask() throws InterruptedException {
-        headerPage.search("QAAUT-201");
+        headerPage.search("QAAUT-222");
         Thread.sleep(5000);//без sleep саб-таск открывается не в поп-апе, а как отдельная страница
         driver.findElement(newSubtaskButtonLocator).click();
         return this;
