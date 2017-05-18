@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="TestSuite" time="8.046" tests="2" errors="0" skipped="0" failures="1">
+  <properties>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.8.0_111\jre\bin"/>
+    <property name="java.vm.version" value="25.111-b14"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="maven.multiModuleProjectDirectory" value="D:\Projects\lr15_architecture"/>
+    <property name="java.vendor.url" value="http://java.oracle.com/"/>
+    <property name="path.separator" value=";"/>
+    <property name="guice.disable.misplaced.annotation.check" value="true"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="file.encoding.pkg" value="sun.io"/>
+    <property name="user.script" value=""/>
+    <property name="user.country" value="RU"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="sun.os.patch.level" value=""/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="user.dir" value="D:\Projects\lr15_architecture"/>
+    <property name="java.runtime.version" value="1.8.0_111-b14"/>
+    <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
+    <property name="java.endorsed.dirs" value="C:\Program Files\Java\jdk1.8.0_111\jre\lib\endorsed"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.io.tmpdir" value="C:\Users\guber\AppData\Local\Temp\"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="user.variant" value=""/>
+    <property name="os.name" value="Windows 10"/>
+    <property name="classworlds.conf" value="C:\Program Files\Maven\apache-maven-3.3.9\bin\m2.conf"/>
+    <property name="sun.jnu.encoding" value="Cp1251"/>
+    <property name="java.library.path" value="C:\Program Files\Java\jdk1.8.0_111\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Windows\system32;C:\Windows;C:\Windows\System32Wbem;C:\ProgramData\Oracle\Java\javapath;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Git\cmd;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\system32;C:\Program Files\Java\jdk1.8.0_111\bin;C:\Program Files (x86)\Skype\Phone\;C:\Users\guber\AppData\Local\Microsoft\WindowsApps;C:\Users\guber\AppData\Local\atom\bin;C:\Program Files\Maven\apache-maven-3.3.9\bin;C:\Program Files\Java\jdk1.8.0_111\bin;."/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="java.class.version" value="52.0"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="os.version" value="10.0"/>
+    <property name="user.home" value="C:\Users\guber"/>
+    <property name="user.timezone" value="Europe/Helsinki"/>
+    <property name="java.awt.printerjob" value="sun.awt.windows.WPrinterJob"/>
+    <property name="java.specification.version" value="1.8"/>
+    <property name="file.encoding" value="Cp1251"/>
+    <property name="user.name" value="guber"/>
+    <property name="java.class.path" value="C:\Program Files\Maven\apache-maven-3.3.9\boot\plexus-classworlds-2.5.2.jar"/>
+    <property name="java.vm.specification.version" value="1.8"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="java.home" value="C:\Program Files\Java\jdk1.8.0_111\jre"/>
+    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher test"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="user.language" value="ru"/>
+    <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
+    <property name="java.vm.info" value="mixed mode"/>
+    <property name="java.version" value="1.8.0_111"/>
+    <property name="java.ext.dirs" value="C:\Program Files\Java\jdk1.8.0_111\jre\lib\ext;C:\WINDOWS\Sun\Java\lib\ext"/>
+    <property name="sun.boot.class.path" value="C:\Program Files\Java\jdk1.8.0_111\jre\lib\resources.jar;C:\Program Files\Java\jdk1.8.0_111\jre\lib\rt.jar;C:\Program Files\Java\jdk1.8.0_111\jre\lib\sunrsasign.jar;C:\Program Files\Java\jdk1.8.0_111\jre\lib\jsse.jar;C:\Program Files\Java\jdk1.8.0_111\jre\lib\jce.jar;C:\Program Files\Java\jdk1.8.0_111\jre\lib\charsets.jar;C:\Program Files\Java\jdk1.8.0_111\jre\lib\jfr.jar;C:\Program Files\Java\jdk1.8.0_111\jre\classes"/>
+    <property name="sun.stderr.encoding" value="cp866"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="maven.home" value="C:\Program Files\Maven\apache-maven-3.3.9"/>
+    <property name="file.separator" value="\"/>
+    <property name="java.vendor.url.bug" value="http://bugreport.sun.com/bugreport/"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="sun.stdout.encoding" value="cp866"/>
+    <property name="sun.desktop" value="windows"/>
+    <property name="sun.cpu.isalist" value="amd64"/>
+  </properties>
+  <testcase name="loginTest" classname="SimpleTest" time="8.04"/>
+  <testcase name="testMethod1" classname="SimpleTest" time="0.006">
+    <failure message="expected [true] but found [false]" type="java.lang.AssertionError">java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:513)
+	at org.testng.Assert.assertTrue(Assert.java:42)
+	at org.testng.Assert.assertTrue(Assert.java:52)
+	at SimpleTest.testMethod1(SimpleTest.java:17)
+</failure>
+    <system-out><![CDATA[2017-05-15 21:00:07 DEBUG RequestAddCookies:122 - CookieSpec selected: default
+2017-05-15 21:00:07 DEBUG RequestAuthCache:76 - Auth cache not set in the context
+2017-05-15 21:00:07 DEBUG PoolingHttpClientConnectionManager:249 - Connection request: [route: {}->http://127.0.0.1:4444][total kept alive: 1; route allocated: 1 of 2000; total allocated: 1 of 2000]
+2017-05-15 21:00:07 DEBUG PoolingHttpClientConnectionManager:282 - Connection leased: [id: 0][route: {}->http://127.0.0.1:4444][total kept alive: 0; route allocated: 1 of 2000; total allocated: 1 of 2000]
+2017-05-15 21:00:07 DEBUG MainClientExec:207 - Stale connection check
+2017-05-15 21:00:07 DEBUG wire:86 - http-outgoing-0 << "[read] I/O error: Read timed out"
+2017-05-15 21:00:07 DEBUG DefaultManagedHttpClientConnection:90 - http-outgoing-0: set socket timeout to 10800000
+2017-05-15 21:00:07 DEBUG MainClientExec:255 - Executing request POST /wd/hub/session HTTP/1.1
+2017-05-15 21:00:07 DEBUG MainClientExec:260 - Target auth state: UNCHALLENGED
+2017-05-15 21:00:07 DEBUG MainClientExec:266 - Proxy auth state: UNCHALLENGED
+2017-05-15 21:00:07 DEBUG headers:135 - http-outgoing-0 >> POST /wd/hub/session HTTP/1.1
+2017-05-15 21:00:07 DEBUG headers:138 - http-outgoing-0 >> Content-Type: application/json; charset=utf-8
+2017-05-15 21:00:07 DEBUG headers:138 - http-outgoing-0 >> Content-Length: 485
+2017-05-15 21:00:07 DEBUG headers:138 - http-outgoing-0 >> Host: 127.0.0.1:4444
+2017-05-15 21:00:07 DEBUG headers:138 - http-outgoing-0 >> Connection: Keep-Alive
+2017-05-15 21:00:07 DEBUG headers:138 - http-outgoing-0 >> User-Agent: Apache-HttpClient/4.5.2 (Java/1.8.0_111)
+2017-05-15 21:00:07 DEBUG headers:138 - http-outgoing-0 >> Accept-Encoding: gzip,deflate
+2017-05-15 21:00:07 DEBUG wire:72 - http-outgoing-0 >> "POST /wd/hub/session HTTP/1.1[\r][\n]"
+2017-05-15 21:00:07 DEBUG wire:72 - http-outgoing-0 >> "Content-Type: application/json; charset=utf-8[\r][\n]"
+2017-05-15 21:00:07 DEBUG wire:72 - http-outgoing-0 >> "Content-Length: 485[\r][\n]"
+2017-05-15 21:00:07 DEBUG wire:72 - http-outgoing-0 >> "Host: 127.0.0.1:4444[\r][\n]"
+2017-05-15 21:00:07 DEBUG wire:72 - http-outgoing-0 >> "Connection: Keep-Alive[\r][\n]"
+2017-05-15 21:00:07 DEBUG wire:72 - http-outgoing-0 >> "User-Agent: Apache-HttpClient/4.5.2 (Java/1.8.0_111)[\r][\n]"
+2017-05-15 21:00:07 DEBUG wire:72 - http-outgoing-0 >> "Accept-Encoding: gzip,deflate[\r][\n]"
+2017-05-15 21:00:07 DEBUG wire:72 - http-outgoing-0 >> "[\r][\n]"
+2017-05-15 21:00:07 DEBUG wire:72 - http-outgoing-0 >> "{[\n]"
+2017-05-15 21:00:07 DEBUG wire:72 - http-outgoing-0 >> "  "desiredCapabilities": {[\n]"
+2017-05-15 21:00:07 DEBUG wire:72 - http-outgoing-0 >> "    "marionette": true,[\n]"
+2017-05-15 21:00:07 DEBUG wire:72 - http-outgoing-0 >> "    "browserName": "firefox",[\n]"
+2017-05-15 21:00:07 DEBUG wire:72 - http-outgoing-0 >> "    "version": "",[\n]"
+2017-05-15 21:00:07 DEBUG wire:72 - http-outgoing-0 >> "    "platform": "ANY"[\n]"
+2017-05-15 21:00:07 DEBUG wire:72 - http-outgoing-0 >> "  },[\n]"
+2017-05-15 21:00:07 DEBUG wire:72 - http-outgoing-0 >> "  "requiredCapabilities": {},[\n]"
+2017-05-15 21:00:07 DEBUG wire:72 - http-outgoing-0 >> "  "capabilities": {[\n]"
+2017-05-15 21:00:07 DEBUG wire:72 - http-outgoing-0 >> "    "desiredCapabilities": {[\n]"
+2017-05-15 21:00:07 DEBUG wire:72 - http-outgoing-0 >> "      "marionette": true,[\n]"
+2017-05-15 21:00:07 DEBUG wire:72 - http-outgoing-0 >> "      "browserName": "firefox",[\n]"
+2017-05-15 21:00:07 DEBUG wire:72 - http-outgoing-0 >> "      "version": "",[\n]"
+2017-05-15 21:00:07 DEBUG wire:72 - http-outgoing-0 >> "      "platform": "ANY"[\n]"
+2017-05-15 21:00:07 DEBUG wire:72 - http-outgoing-0 >> "    },[\n]"
+2017-05-15 21:00:07 DEBUG wire:72 - http-outgoing-0 >> "    "requiredCapabilities": {}[\n]"
+2017-05-15 21:00:07 DEBUG wire:72 - http-outgoing-0 >> "  },[\n]"
+2017-05-15 21:00:07 DEBUG wire:72 - http-outgoing-0 >> "  "alwaysMatch": {[\n]"
+2017-05-15 21:00:07 DEBUG wire:72 - http-outgoing-0 >> "    "version": "",[\n]"
+2017-05-15 21:00:07 DEBUG wire:72 - http-outgoing-0 >> "    "platform": "ANY"[\n]"
+2017-05-15 21:00:07 DEBUG wire:72 - http-outgoing-0 >> "  },[\n]"
+2017-05-15 21:00:07 DEBUG wire:72 - http-outgoing-0 >> "  "firstMatch": [[\n]"
+2017-05-15 21:00:07 DEBUG wire:72 - http-outgoing-0 >> "    {[\n]"
+2017-05-15 21:00:07 DEBUG wire:72 - http-outgoing-0 >> "      "browserName": "firefox"[\n]"
+2017-05-15 21:00:07 DEBUG wire:72 - http-outgoing-0 >> "    }[\n]"
+2017-05-15 21:00:07 DEBUG wire:72 - http-outgoing-0 >> "  ][\n]"
+2017-05-15 21:00:07 DEBUG wire:86 - http-outgoing-0 >> "}"
+2017-05-15 21:00:10 DEBUG wire:72 - http-outgoing-0 << "HTTP/1.1 200 OK[\r][\n]"
+2017-05-15 21:00:10 DEBUG wire:72 - http-outgoing-0 << "Date: Mon, 15 May 2017 18:00:07 GMT[\r][\n]"
+2017-05-15 21:00:10 DEBUG wire:72 - http-outgoing-0 << "Expires: Thu, 01 Jan 1970 00:00:00 GMT[\r][\n]"
+2017-05-15 21:00:10 DEBUG wire:72 - http-outgoing-0 << "Cache-Control: no-cache[\r][\n]"
+2017-05-15 21:00:10 DEBUG wire:72 - http-outgoing-0 << "Content-Type: application/json;charset=utf-8[\r][\n]"
+2017-05-15 21:00:10 DEBUG wire:72 - http-outgoing-0 << "Server: Jetty(9.4.3.v20170317)[\r][\n]"
+2017-05-15 21:00:10 DEBUG wire:72 - http-outgoing-0 << "Content-Length: 716[\r][\n]"
+2017-05-15 21:00:10 DEBUG wire:72 - http-outgoing-0 << "[\r][\n]"
+2017-05-15 21:00:10 DEBUG wire:86 - http-outgoing-0 << "{"state":null,"sessionId":"db299605-3a6d-4299-ba89-578223a15870","hCode":919754598,"value":{"moz:profile":"C:\\Users\\guber\\AppData\\Local\\Temp\\rust_mozprofile.AwpP37vmqX9y","rotatable":false,"timeouts":{"implicit":0.0,"page load":300000.0,"script":30000.0},"pageLoadStrategy":"normal","platform":"ANY","specificationLevel":0.0,"moz:accessibilityChecks":false,"webdriver.remote.sessionid":"db299605-3a6d-4299-ba89-578223a15870","acceptInsecureCerts":false,"browserVersion":"52.0","platformVersion":"10.0","moz:processID":8064.0,"browserName":"firefox","takesScreenshot":true,"javascriptEnabled":true,"platformName":"windows_nt","cssSelectorsEnabled":true},"class":"org.openqa.selenium.remote.Response","status":0}"
+2017-05-15 21:00:10 DEBUG headers:124 - http-outgoing-0 << HTTP/1.1 200 OK
+2017-05-15 21:00:10 DEBUG headers:127 - http-outgoing-0 << Date: Mon, 15 May 2017 18:00:07 GMT
+2017-05-15 21:00:10 DEBUG headers:127 - http-outgoing-0 << Expires: Thu, 01 Jan 1970 00:00:00 GMT
+2017-05-15 21:00:10 DEBUG headers:127 - http-outgoing-0 << Cache-Control: no-cache
+2017-05-15 21:00:10 DEBUG headers:127 - http-outgoing-0 << Content-Type: application/json;charset=utf-8
+2017-05-15 21:00:10 DEBUG headers:127 - http-outgoing-0 << Server: Jetty(9.4.3.v20170317)
+2017-05-15 21:00:10 DEBUG headers:127 - http-outgoing-0 << Content-Length: 716
+2017-05-15 21:00:10 DEBUG MainClientExec:284 - Connection can be kept alive indefinitely
+2017-05-15 21:00:10 DEBUG PoolingHttpClientConnectionManager:314 - Connection [id: 0][route: {}->http://127.0.0.1:4444] can be kept alive indefinitely
+2017-05-15 21:00:10 DEBUG PoolingHttpClientConnectionManager:320 - Connection released: [id: 0][route: {}->http://127.0.0.1:4444][total kept alive: 1; route allocated: 1 of 2000; total allocated: 1 of 2000]
+The name of the testcase failed is :testMethod1
+]]></system-out>
+    <system-err><![CDATA[мая 15, 2017 9:00:10 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: OSS
+]]></system-err>
+  </testcase>
+</testsuite>

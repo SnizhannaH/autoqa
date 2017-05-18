@@ -24,7 +24,7 @@ public class Test {
         // Create new sub-task
         newIssuePage
                 .openNewSubtask()
-                .fillSummary("Snizhanna test7")
+                .fillSummary("Snizhanna test9")
                 .clickSubmitButton();
 
         // Open and delete sub-task
