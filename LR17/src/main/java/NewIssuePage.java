@@ -26,7 +26,7 @@ public class NewIssuePage {
     }
 
     public NewIssuePage openNewSubtask() throws InterruptedException {
-        headerPage.search("QAAUT-329");
+        headerPage.search("QAAUT-344");
         //Thread.sleep(5000);//без sleep саб-таск открывается не в поп-апе, а как отдельная страница
         waiting(newSubtaskButtonLocator);
         driver.findElement(newSubtaskButtonLocator).click();
@@ -52,7 +52,6 @@ public class NewIssuePage {
 //            e.printStackTrace();
 //        }
         driver.findElement(submitButtonLocator).click();
-        System.out.println("Sub-task has been created successfully!");
         return this;
     }
 
@@ -76,6 +75,9 @@ public class NewIssuePage {
 //        }
         waiting(moreButtonLocator);
         ((JavascriptExecutor) driver).executeScript("window.scrollBy(0,-250)", "");
+
+//        invisibility(By.xpath("//*[@id='aui-flag-container']/div/div"));
+
         WebElement element= driver.findElement(moreButtonLocator);
         element.click();
         return this;
@@ -106,5 +108,10 @@ public class NewIssuePage {
         (new WebDriverWait(driver, 10)).until(ExpectedConditions.presenceOfElementLocated(locator));
         return this;
     }
+
+//    public NewIssuePage invisibility(By locator){
+//        (new WebDriverWait(driver, 10)).until(ExpectedConditions.invisibilityOfElementLocated(locator));
+//        return this;
+//    }
 }
 

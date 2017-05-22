@@ -73,6 +73,6 @@ public class ListenerTest implements ITestListener {
 
     public void onFinish(ITestContext iTestContext) {
         RemoteDriverManager.getDriver().manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-       // RemoteDriverManager.closeDriver();
+        RemoteDriverManager.closeDriver();
     }
 }

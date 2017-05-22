@@ -1,4 +1,6 @@
 ListenerTest.class
-LoginPage.class
+NewIssuePage.class
 RemoteDriverManager.class
+HeaderPage.class
 RemoteWebDriverFactory.class
+LoginPage.class

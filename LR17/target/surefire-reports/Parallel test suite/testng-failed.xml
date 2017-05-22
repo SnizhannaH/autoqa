@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite thread-count="3" guice-stage="DEVELOPMENT" verbose="0" name="Failed suite [Parallel test suite]" parallel="tests">
+  <parameter name="implicitWaitInSeconds" value="20"/>
   <parameter name="myParam" value="This is the value for a parameter"/>
   <parameter name="browserName" value="firefox"/>
   <listeners>
@@ -15,7 +16,7 @@
     <classes>
       <class name="SimpleTest">
         <methods>
-          <include name="testMethod1" invocation-numbers="0"/>
+          <include name="loginCreateDeleteTest"/>
         </methods>
       </class> <!-- SimpleTest -->
     </classes>

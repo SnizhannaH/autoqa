@@ -35,6 +35,8 @@ public class LoginPage {
 //        }
         //waiting(By.id("login-form-submit"));
         driver.findElement(loginButtonLocator).submit();
+      waiting(By.xpath("//*[contains(text(),'System Dashboard')]"));
+
     }
 
     public LoginPage waiting(By locator){

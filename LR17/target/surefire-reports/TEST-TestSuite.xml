@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="TestSuite" time="8.046" tests="2" errors="0" skipped="0" failures="1">
+<testsuite name="TestSuite" time="0.016" tests="1" errors="0" skipped="0" failures="1">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.8.0_111\jre\bin"/>
     <property name="java.vm.version" value="25.111-b14"/>
     <property name="java.vm.vendor" value="Oracle Corporation"/>
-    <property name="maven.multiModuleProjectDirectory" value="D:\Projects\lr15_architecture"/>
+    <property name="maven.multiModuleProjectDirectory" value="D:\qa_auto\LR17"/>
     <property name="java.vendor.url" value="http://java.oracle.com/"/>
     <property name="path.separator" value=";"/>
     <property name="guice.disable.misplaced.annotation.check" value="true"/>
@@ -16,7 +16,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="sun.os.patch.level" value=""/>
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
-    <property name="user.dir" value="D:\Projects\lr15_architecture"/>
+    <property name="user.dir" value="D:\qa_auto\LR17"/>
     <property name="java.runtime.version" value="1.8.0_111-b14"/>
     <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
     <property name="java.endorsed.dirs" value="C:\Program Files\Java\jdk1.8.0_111\jre\lib\endorsed"/>
@@ -43,7 +43,7 @@
     <property name="java.vm.specification.version" value="1.8"/>
     <property name="sun.arch.data.model" value="64"/>
     <property name="java.home" value="C:\Program Files\Java\jdk1.8.0_111\jre"/>
-    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher test"/>
+    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher clean test"/>
     <property name="java.specification.vendor" value="Oracle Corporation"/>
     <property name="user.language" value="ru"/>
     <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
@@ -62,90 +62,139 @@
     <property name="sun.desktop" value="windows"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase name="loginTest" classname="SimpleTest" time="8.04"/>
-  <testcase name="testMethod1" classname="SimpleTest" time="0.006">
-    <failure message="expected [true] but found [false]" type="java.lang.AssertionError">java.lang.AssertionError: expected [true] but found [false]
-	at org.testng.Assert.fail(Assert.java:94)
-	at org.testng.Assert.failNotEquals(Assert.java:513)
-	at org.testng.Assert.assertTrue(Assert.java:42)
-	at org.testng.Assert.assertTrue(Assert.java:52)
-	at SimpleTest.testMethod1(SimpleTest.java:17)
+  <testcase name="loginCreateDeleteTest" classname="SimpleTest" time="0.016">
+    <failure type="java.lang.NullPointerException:">java.lang.NullPointerException: null
+	at LoginPage.open(LoginPage.java:19)
+	at SimpleTest.loginCreateDeleteTest(SimpleTest.java:24)
 </failure>
-    <system-out><![CDATA[2017-05-15 21:00:07 DEBUG RequestAddCookies:122 - CookieSpec selected: default
-2017-05-15 21:00:07 DEBUG RequestAuthCache:76 - Auth cache not set in the context
-2017-05-15 21:00:07 DEBUG PoolingHttpClientConnectionManager:249 - Connection request: [route: {}->http://127.0.0.1:4444][total kept alive: 1; route allocated: 1 of 2000; total allocated: 1 of 2000]
-2017-05-15 21:00:07 DEBUG PoolingHttpClientConnectionManager:282 - Connection leased: [id: 0][route: {}->http://127.0.0.1:4444][total kept alive: 0; route allocated: 1 of 2000; total allocated: 1 of 2000]
-2017-05-15 21:00:07 DEBUG MainClientExec:207 - Stale connection check
-2017-05-15 21:00:07 DEBUG wire:86 - http-outgoing-0 << "[read] I/O error: Read timed out"
-2017-05-15 21:00:07 DEBUG DefaultManagedHttpClientConnection:90 - http-outgoing-0: set socket timeout to 10800000
-2017-05-15 21:00:07 DEBUG MainClientExec:255 - Executing request POST /wd/hub/session HTTP/1.1
-2017-05-15 21:00:07 DEBUG MainClientExec:260 - Target auth state: UNCHALLENGED
-2017-05-15 21:00:07 DEBUG MainClientExec:266 - Proxy auth state: UNCHALLENGED
-2017-05-15 21:00:07 DEBUG headers:135 - http-outgoing-0 >> POST /wd/hub/session HTTP/1.1
-2017-05-15 21:00:07 DEBUG headers:138 - http-outgoing-0 >> Content-Type: application/json; charset=utf-8
-2017-05-15 21:00:07 DEBUG headers:138 - http-outgoing-0 >> Content-Length: 485
-2017-05-15 21:00:07 DEBUG headers:138 - http-outgoing-0 >> Host: 127.0.0.1:4444
-2017-05-15 21:00:07 DEBUG headers:138 - http-outgoing-0 >> Connection: Keep-Alive
-2017-05-15 21:00:07 DEBUG headers:138 - http-outgoing-0 >> User-Agent: Apache-HttpClient/4.5.2 (Java/1.8.0_111)
-2017-05-15 21:00:07 DEBUG headers:138 - http-outgoing-0 >> Accept-Encoding: gzip,deflate
-2017-05-15 21:00:07 DEBUG wire:72 - http-outgoing-0 >> "POST /wd/hub/session HTTP/1.1[\r][\n]"
-2017-05-15 21:00:07 DEBUG wire:72 - http-outgoing-0 >> "Content-Type: application/json; charset=utf-8[\r][\n]"
-2017-05-15 21:00:07 DEBUG wire:72 - http-outgoing-0 >> "Content-Length: 485[\r][\n]"
-2017-05-15 21:00:07 DEBUG wire:72 - http-outgoing-0 >> "Host: 127.0.0.1:4444[\r][\n]"
-2017-05-15 21:00:07 DEBUG wire:72 - http-outgoing-0 >> "Connection: Keep-Alive[\r][\n]"
-2017-05-15 21:00:07 DEBUG wire:72 - http-outgoing-0 >> "User-Agent: Apache-HttpClient/4.5.2 (Java/1.8.0_111)[\r][\n]"
-2017-05-15 21:00:07 DEBUG wire:72 - http-outgoing-0 >> "Accept-Encoding: gzip,deflate[\r][\n]"
-2017-05-15 21:00:07 DEBUG wire:72 - http-outgoing-0 >> "[\r][\n]"
-2017-05-15 21:00:07 DEBUG wire:72 - http-outgoing-0 >> "{[\n]"
-2017-05-15 21:00:07 DEBUG wire:72 - http-outgoing-0 >> "  "desiredCapabilities": {[\n]"
-2017-05-15 21:00:07 DEBUG wire:72 - http-outgoing-0 >> "    "marionette": true,[\n]"
-2017-05-15 21:00:07 DEBUG wire:72 - http-outgoing-0 >> "    "browserName": "firefox",[\n]"
-2017-05-15 21:00:07 DEBUG wire:72 - http-outgoing-0 >> "    "version": "",[\n]"
-2017-05-15 21:00:07 DEBUG wire:72 - http-outgoing-0 >> "    "platform": "ANY"[\n]"
-2017-05-15 21:00:07 DEBUG wire:72 - http-outgoing-0 >> "  },[\n]"
-2017-05-15 21:00:07 DEBUG wire:72 - http-outgoing-0 >> "  "requiredCapabilities": {},[\n]"
-2017-05-15 21:00:07 DEBUG wire:72 - http-outgoing-0 >> "  "capabilities": {[\n]"
-2017-05-15 21:00:07 DEBUG wire:72 - http-outgoing-0 >> "    "desiredCapabilities": {[\n]"
-2017-05-15 21:00:07 DEBUG wire:72 - http-outgoing-0 >> "      "marionette": true,[\n]"
-2017-05-15 21:00:07 DEBUG wire:72 - http-outgoing-0 >> "      "browserName": "firefox",[\n]"
-2017-05-15 21:00:07 DEBUG wire:72 - http-outgoing-0 >> "      "version": "",[\n]"
-2017-05-15 21:00:07 DEBUG wire:72 - http-outgoing-0 >> "      "platform": "ANY"[\n]"
-2017-05-15 21:00:07 DEBUG wire:72 - http-outgoing-0 >> "    },[\n]"
-2017-05-15 21:00:07 DEBUG wire:72 - http-outgoing-0 >> "    "requiredCapabilities": {}[\n]"
-2017-05-15 21:00:07 DEBUG wire:72 - http-outgoing-0 >> "  },[\n]"
-2017-05-15 21:00:07 DEBUG wire:72 - http-outgoing-0 >> "  "alwaysMatch": {[\n]"
-2017-05-15 21:00:07 DEBUG wire:72 - http-outgoing-0 >> "    "version": "",[\n]"
-2017-05-15 21:00:07 DEBUG wire:72 - http-outgoing-0 >> "    "platform": "ANY"[\n]"
-2017-05-15 21:00:07 DEBUG wire:72 - http-outgoing-0 >> "  },[\n]"
-2017-05-15 21:00:07 DEBUG wire:72 - http-outgoing-0 >> "  "firstMatch": [[\n]"
-2017-05-15 21:00:07 DEBUG wire:72 - http-outgoing-0 >> "    {[\n]"
-2017-05-15 21:00:07 DEBUG wire:72 - http-outgoing-0 >> "      "browserName": "firefox"[\n]"
-2017-05-15 21:00:07 DEBUG wire:72 - http-outgoing-0 >> "    }[\n]"
-2017-05-15 21:00:07 DEBUG wire:72 - http-outgoing-0 >> "  ][\n]"
-2017-05-15 21:00:07 DEBUG wire:86 - http-outgoing-0 >> "}"
-2017-05-15 21:00:10 DEBUG wire:72 - http-outgoing-0 << "HTTP/1.1 200 OK[\r][\n]"
-2017-05-15 21:00:10 DEBUG wire:72 - http-outgoing-0 << "Date: Mon, 15 May 2017 18:00:07 GMT[\r][\n]"
-2017-05-15 21:00:10 DEBUG wire:72 - http-outgoing-0 << "Expires: Thu, 01 Jan 1970 00:00:00 GMT[\r][\n]"
-2017-05-15 21:00:10 DEBUG wire:72 - http-outgoing-0 << "Cache-Control: no-cache[\r][\n]"
-2017-05-15 21:00:10 DEBUG wire:72 - http-outgoing-0 << "Content-Type: application/json;charset=utf-8[\r][\n]"
-2017-05-15 21:00:10 DEBUG wire:72 - http-outgoing-0 << "Server: Jetty(9.4.3.v20170317)[\r][\n]"
-2017-05-15 21:00:10 DEBUG wire:72 - http-outgoing-0 << "Content-Length: 716[\r][\n]"
-2017-05-15 21:00:10 DEBUG wire:72 - http-outgoing-0 << "[\r][\n]"
-2017-05-15 21:00:10 DEBUG wire:86 - http-outgoing-0 << "{"state":null,"sessionId":"db299605-3a6d-4299-ba89-578223a15870","hCode":919754598,"value":{"moz:profile":"C:\\Users\\guber\\AppData\\Local\\Temp\\rust_mozprofile.AwpP37vmqX9y","rotatable":false,"timeouts":{"implicit":0.0,"page load":300000.0,"script":30000.0},"pageLoadStrategy":"normal","platform":"ANY","specificationLevel":0.0,"moz:accessibilityChecks":false,"webdriver.remote.sessionid":"db299605-3a6d-4299-ba89-578223a15870","acceptInsecureCerts":false,"browserVersion":"52.0","platformVersion":"10.0","moz:processID":8064.0,"browserName":"firefox","takesScreenshot":true,"javascriptEnabled":true,"platformName":"windows_nt","cssSelectorsEnabled":true},"class":"org.openqa.selenium.remote.Response","status":0}"
-2017-05-15 21:00:10 DEBUG headers:124 - http-outgoing-0 << HTTP/1.1 200 OK
-2017-05-15 21:00:10 DEBUG headers:127 - http-outgoing-0 << Date: Mon, 15 May 2017 18:00:07 GMT
-2017-05-15 21:00:10 DEBUG headers:127 - http-outgoing-0 << Expires: Thu, 01 Jan 1970 00:00:00 GMT
-2017-05-15 21:00:10 DEBUG headers:127 - http-outgoing-0 << Cache-Control: no-cache
-2017-05-15 21:00:10 DEBUG headers:127 - http-outgoing-0 << Content-Type: application/json;charset=utf-8
-2017-05-15 21:00:10 DEBUG headers:127 - http-outgoing-0 << Server: Jetty(9.4.3.v20170317)
-2017-05-15 21:00:10 DEBUG headers:127 - http-outgoing-0 << Content-Length: 716
-2017-05-15 21:00:10 DEBUG MainClientExec:284 - Connection can be kept alive indefinitely
-2017-05-15 21:00:10 DEBUG PoolingHttpClientConnectionManager:314 - Connection [id: 0][route: {}->http://127.0.0.1:4444] can be kept alive indefinitely
-2017-05-15 21:00:10 DEBUG PoolingHttpClientConnectionManager:320 - Connection released: [id: 0][route: {}->http://127.0.0.1:4444][total kept alive: 1; route allocated: 1 of 2000; total allocated: 1 of 2000]
-The name of the testcase failed is :testMethod1
+    <system-out><![CDATA[Test1 test case started
+2017-05-22 19:38:37 DEBUG RequestAddCookies:122 - CookieSpec selected: default
+2017-05-22 19:38:37 DEBUG RequestAuthCache:76 - Auth cache not set in the context
+2017-05-22 19:38:37 DEBUG PoolingHttpClientConnectionManager:249 - Connection request: [route: {}->http://127.0.0.1:4444][total kept alive: 0; route allocated: 0 of 2000; total allocated: 0 of 2000]
+2017-05-22 19:38:37 DEBUG PoolingHttpClientConnectionManager:282 - Connection leased: [id: 0][route: {}->http://127.0.0.1:4444][total kept alive: 0; route allocated: 1 of 2000; total allocated: 1 of 2000]
+2017-05-22 19:38:37 DEBUG MainClientExec:234 - Opening connection {}->http://127.0.0.1:4444
+2017-05-22 19:38:37 DEBUG DefaultHttpClientConnectionOperator:138 - Connecting to /127.0.0.1:4444
+2017-05-22 19:38:37 DEBUG DefaultHttpClientConnectionOperator:145 - Connection established 127.0.0.1:49563<->127.0.0.1:4444
+2017-05-22 19:38:37 DEBUG DefaultManagedHttpClientConnection:90 - http-outgoing-0: set socket timeout to 10800000
+2017-05-22 19:38:37 DEBUG MainClientExec:255 - Executing request POST /wd/hub/session HTTP/1.1
+2017-05-22 19:38:37 DEBUG MainClientExec:260 - Target auth state: UNCHALLENGED
+2017-05-22 19:38:37 DEBUG MainClientExec:266 - Proxy auth state: UNCHALLENGED
+2017-05-22 19:38:37 DEBUG headers:135 - http-outgoing-0 >> POST /wd/hub/session HTTP/1.1
+2017-05-22 19:38:37 DEBUG headers:138 - http-outgoing-0 >> Content-Type: application/json; charset=utf-8
+2017-05-22 19:38:37 DEBUG headers:138 - http-outgoing-0 >> Content-Length: 485
+2017-05-22 19:38:37 DEBUG headers:138 - http-outgoing-0 >> Host: 127.0.0.1:4444
+2017-05-22 19:38:37 DEBUG headers:138 - http-outgoing-0 >> Connection: Keep-Alive
+2017-05-22 19:38:37 DEBUG headers:138 - http-outgoing-0 >> User-Agent: Apache-HttpClient/4.5.2 (Java/1.8.0_111)
+2017-05-22 19:38:37 DEBUG headers:138 - http-outgoing-0 >> Accept-Encoding: gzip,deflate
+2017-05-22 19:38:37 DEBUG wire:72 - http-outgoing-0 >> "POST /wd/hub/session HTTP/1.1[\r][\n]"
+2017-05-22 19:38:37 DEBUG wire:72 - http-outgoing-0 >> "Content-Type: application/json; charset=utf-8[\r][\n]"
+2017-05-22 19:38:37 DEBUG wire:72 - http-outgoing-0 >> "Content-Length: 485[\r][\n]"
+2017-05-22 19:38:37 DEBUG wire:72 - http-outgoing-0 >> "Host: 127.0.0.1:4444[\r][\n]"
+2017-05-22 19:38:37 DEBUG wire:72 - http-outgoing-0 >> "Connection: Keep-Alive[\r][\n]"
+2017-05-22 19:38:37 DEBUG wire:72 - http-outgoing-0 >> "User-Agent: Apache-HttpClient/4.5.2 (Java/1.8.0_111)[\r][\n]"
+2017-05-22 19:38:37 DEBUG wire:72 - http-outgoing-0 >> "Accept-Encoding: gzip,deflate[\r][\n]"
+2017-05-22 19:38:37 DEBUG wire:72 - http-outgoing-0 >> "[\r][\n]"
+2017-05-22 19:38:37 DEBUG wire:72 - http-outgoing-0 >> "{[\n]"
+2017-05-22 19:38:37 DEBUG wire:72 - http-outgoing-0 >> "  "desiredCapabilities": {[\n]"
+2017-05-22 19:38:37 DEBUG wire:72 - http-outgoing-0 >> "    "marionette": true,[\n]"
+2017-05-22 19:38:37 DEBUG wire:72 - http-outgoing-0 >> "    "browserName": "firefox",[\n]"
+2017-05-22 19:38:37 DEBUG wire:72 - http-outgoing-0 >> "    "version": "",[\n]"
+2017-05-22 19:38:37 DEBUG wire:72 - http-outgoing-0 >> "    "platform": "ANY"[\n]"
+2017-05-22 19:38:37 DEBUG wire:72 - http-outgoing-0 >> "  },[\n]"
+2017-05-22 19:38:37 DEBUG wire:72 - http-outgoing-0 >> "  "requiredCapabilities": {},[\n]"
+2017-05-22 19:38:37 DEBUG wire:72 - http-outgoing-0 >> "  "capabilities": {[\n]"
+2017-05-22 19:38:37 DEBUG wire:72 - http-outgoing-0 >> "    "desiredCapabilities": {[\n]"
+2017-05-22 19:38:37 DEBUG wire:72 - http-outgoing-0 >> "      "marionette": true,[\n]"
+2017-05-22 19:38:37 DEBUG wire:72 - http-outgoing-0 >> "      "browserName": "firefox",[\n]"
+2017-05-22 19:38:37 DEBUG wire:72 - http-outgoing-0 >> "      "version": "",[\n]"
+2017-05-22 19:38:37 DEBUG wire:72 - http-outgoing-0 >> "      "platform": "ANY"[\n]"
+2017-05-22 19:38:37 DEBUG wire:72 - http-outgoing-0 >> "    },[\n]"
+2017-05-22 19:38:37 DEBUG wire:72 - http-outgoing-0 >> "    "requiredCapabilities": {}[\n]"
+2017-05-22 19:38:37 DEBUG wire:72 - http-outgoing-0 >> "  },[\n]"
+2017-05-22 19:38:37 DEBUG wire:72 - http-outgoing-0 >> "  "alwaysMatch": {[\n]"
+2017-05-22 19:38:37 DEBUG wire:72 - http-outgoing-0 >> "    "version": "",[\n]"
+2017-05-22 19:38:37 DEBUG wire:72 - http-outgoing-0 >> "    "platform": "ANY"[\n]"
+2017-05-22 19:38:37 DEBUG wire:72 - http-outgoing-0 >> "  },[\n]"
+2017-05-22 19:38:37 DEBUG wire:72 - http-outgoing-0 >> "  "firstMatch": [[\n]"
+2017-05-22 19:38:37 DEBUG wire:72 - http-outgoing-0 >> "    {[\n]"
+2017-05-22 19:38:37 DEBUG wire:72 - http-outgoing-0 >> "      "browserName": "firefox"[\n]"
+2017-05-22 19:38:37 DEBUG wire:72 - http-outgoing-0 >> "    }[\n]"
+2017-05-22 19:38:37 DEBUG wire:72 - http-outgoing-0 >> "  ][\n]"
+2017-05-22 19:38:37 DEBUG wire:86 - http-outgoing-0 >> "}"
+2017-05-22 19:38:37 DEBUG wire:72 - http-outgoing-0 << "HTTP/1.1 500 Server Error[\r][\n]"
+2017-05-22 19:38:37 DEBUG wire:72 - http-outgoing-0 << "Content-Type: application/json; charset=UTF-8[\r][\n]"
+2017-05-22 19:38:37 DEBUG wire:72 - http-outgoing-0 << "Content-Length: 3003[\r][\n]"
+2017-05-22 19:38:37 DEBUG wire:72 - http-outgoing-0 << "Server: Jetty(9.2.z-SNAPSHOT)[\r][\n]"
+2017-05-22 19:38:37 DEBUG wire:72 - http-outgoing-0 << "[\r][\n]"
+2017-05-22 19:38:37 DEBUG wire:86 - http-outgoing-0 << "{"status":13,"value":{"message":"Error forwarding the new session Empty pool of VM for setup Capabilities [{marionette\u003dtrue, browserName\u003dfirefox, version\u003d, platform\u003dANY}]","class":"org.openqa.grid.common.exception.GridException","stackTrace":[{"fileName":"RequestHandler.java","className":"org.openqa.grid.web.servlet.handler.RequestHandler","methodName":"process","lineNumber":115},{"fileName":"DriverServlet.java","className":"org.openqa.grid.web.servlet.DriverServlet","methodName":"process","lineNumber":83},{"fileName":"DriverServlet.java","className":"org.openqa.grid.web.servlet.DriverServlet","methodName":"doPost","lineNumber":67},{"fileName":"HttpServlet.java","className":"javax.servlet.http.HttpServlet","methodName":"service","lineNumber":707},{"fileName":"HttpServlet.java","className":"javax.servlet.http.HttpServlet","methodName":"service","lineNumber":790},{"fileName":"ServletHolder.java","className":"org.seleniumhq.jetty9.servlet.ServletHolder","methodName":"handle","lineNumber":808},{"fileName":"ServletHandler.java","className":"org.seleniumhq.jetty9.servlet.ServletHandler","methodName":"doHandle","lineNumber":587},{"fileName":"SessionHandler.java","className":"org.seleniumhq.jetty9.server.session.SessionHandler","methodName":"doHandle","lineNumber":221},{"fileName":"ContextHandler.java","className":"org.seleniumhq.jetty9.server.handler.ContextHandler","methodName":"doHandle","lineNumber":1127},{"fileName":"ServletHandler.java","className":"org.seleniumhq.jetty9.servlet.ServletHandler","methodName":"doScope","lineNumber":515},{"fileName":"SessionHandler.java","className":"org.seleniumhq.jetty9.server.session.SessionHandler","methodName":"doScope","lineNumber":185},{"fileName":"ContextHandler.java","className":"org.seleniumhq.jetty9.server.handler.ContextHandler","methodName":"doScope","lineNumber":1061},{"fileName":"ScopedHandler.java","className":"org.seleniumhq.jetty9.server.handler.ScopedHandler","methodName":"handle","lineNumber":141},{"fileName":"HandlerWrapper.java","className":"org.seleniumhq.jetty9.server.handler.HandlerWrapper","methodName":"handle","lineNumber":97},{"fileName":"Server.java","className":"org.seleniumhq.jetty9.server.Server","methodName":"handle","lineNumber":499},{"fileName":"HttpChannel.java","className":"org.seleniumhq.jetty9.server.HttpChannel","methodName":"handle","lineNumber":310},{"fileName":"HttpConnection.java","className":"org.seleniumhq.jetty9.server.HttpConnection","methodName":"onFillable","lineNumber":257},{"fileName":"AbstractConnection.java","className":"org.seleniumhq.jetty9.io.AbstractConnection$2","methodName":"run","lineNumber":540},{"fileName":"QueuedThreadPool.java","className":"org.seleniumhq.jetty9.util.thread.QueuedThreadPool","methodName":"runJob","lineNumber":635},{"fileName":"QueuedThreadPool.java","className":"org.seleniumhq.jetty9.util.thread.QueuedThreadPool$3","methodName":"run","lineNumber":555},{"className":"java.lang.Thread","methodName":"run","lineNumber":-1}]}}"
+2017-05-22 19:38:37 DEBUG headers:124 - http-outgoing-0 << HTTP/1.1 500 Server Error
+2017-05-22 19:38:37 DEBUG headers:127 - http-outgoing-0 << Content-Type: application/json; charset=UTF-8
+2017-05-22 19:38:37 DEBUG headers:127 - http-outgoing-0 << Content-Length: 3003
+2017-05-22 19:38:37 DEBUG headers:127 - http-outgoing-0 << Server: Jetty(9.2.z-SNAPSHOT)
+2017-05-22 19:38:37 DEBUG MainClientExec:284 - Connection can be kept alive indefinitely
+2017-05-22 19:38:37 DEBUG PoolingHttpClientConnectionManager:314 - Connection [id: 0][route: {}->http://127.0.0.1:4444] can be kept alive indefinitely
+2017-05-22 19:38:37 DEBUG PoolingHttpClientConnectionManager:320 - Connection released: [id: 0][route: {}->http://127.0.0.1:4444][total kept alive: 1; route allocated: 1 of 2000; total allocated: 1 of 2000]
+The name of the testcase failed is :loginCreateDeleteTest
 ]]></system-out>
-    <system-err><![CDATA[мая 15, 2017 9:00:10 PM org.openqa.selenium.remote.ProtocolHandshake createSession
-INFO: Detected dialect: OSS
+    <system-err><![CDATA[org.openqa.selenium.SessionNotCreatedException: Error forwarding the new session Empty pool of VM for setup Capabilities [{marionette=true, browserName=firefox, version=, platform=ANY}]
+Command duration or timeout: 0 milliseconds
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:216)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:168)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:363)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:113)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:141)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:604)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:244)
+	at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:131)
+	at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:158)
+	at RemoteWebDriverFactory.createInstance(RemoteWebDriverFactory.java:31)
+	at ListenerTest.onTestStart(ListenerTest.java:17)
+	at org.testng.internal.Invoker.runTestListeners(Invoker.java:1724)
+	at org.testng.internal.Invoker.runTestListeners(Invoker.java:1699)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:622)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:851)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1177)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.TestRunner.privateRun(TestRunner.java:756)
+	at org.testng.TestRunner.run(TestRunner.java:610)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:387)
+	at org.testng.SuiteRunner.access$000(SuiteRunner.java:39)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:421)
+	at org.testng.internal.thread.ThreadUtil$2.call(ThreadUtil.java:64)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.openqa.selenium.SessionNotCreatedException: Error forwarding the new session Empty pool of VM for setup Capabilities [{marionette=true, browserName=firefox, version=, platform=ANY}]
+Build info: version: '3.3.0', revision: 'b526bd5b41', time: '2017-03-07 19:26:04 +0000'
+System info: host: 'DESKTOP-1Q58IFO', ip: '192.168.56.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_111'
+Driver info: driver.version: unknown
+	at org.openqa.grid.web.servlet.handler.RequestHandler.process(RequestHandler.java:115)
+	at org.openqa.grid.web.servlet.DriverServlet.process(DriverServlet.java:83)
+	at org.openqa.grid.web.servlet.DriverServlet.doPost(DriverServlet.java:67)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:707)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:790)
+	at org.seleniumhq.jetty9.servlet.ServletHolder.handle(ServletHolder.java:808)
+	at org.seleniumhq.jetty9.servlet.ServletHandler.doHandle(ServletHandler.java:587)
+	at org.seleniumhq.jetty9.server.session.SessionHandler.doHandle(SessionHandler.java:221)
+	at org.seleniumhq.jetty9.server.handler.ContextHandler.doHandle(ContextHandler.java:1127)
+	at org.seleniumhq.jetty9.servlet.ServletHandler.doScope(ServletHandler.java:515)
+	at org.seleniumhq.jetty9.server.session.SessionHandler.doScope(SessionHandler.java:185)
+	at org.seleniumhq.jetty9.server.handler.ContextHandler.doScope(ContextHandler.java:1061)
+	at org.seleniumhq.jetty9.server.handler.ScopedHandler.handle(ScopedHandler.java:141)
+	at org.seleniumhq.jetty9.server.handler.HandlerWrapper.handle(HandlerWrapper.java:97)
+	at org.seleniumhq.jetty9.server.Server.handle(Server.java:499)
+	at org.seleniumhq.jetty9.server.HttpChannel.handle(HttpChannel.java:310)
+	at org.seleniumhq.jetty9.server.HttpConnection.onFillable(HttpConnection.java:257)
+	at org.seleniumhq.jetty9.io.AbstractConnection$2.run(AbstractConnection.java:540)
+	at org.seleniumhq.jetty9.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:635)
+	at org.seleniumhq.jetty9.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:555)
+	at java.lang.Thread.run(Unknown Source)
 ]]></system-err>
   </testcase>
 </testsuite>
