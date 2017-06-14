@@ -35,23 +35,29 @@ public class SimpleTest {
 
     @Test(groups = {"functional", "backend"})
     public void subTaskCRUD() throws InterruptedException {
-
-        String issueId;
+        String issueKey;
         RestAssured.baseURI = "http://soft.it-hillel.com.ua:8080";
         JiraJsonFixture jiraJsonFixture = new JiraJsonFixture();
         String issueJson = jiraJsonFixture.generateJSONForIssue();
+        //header("JSESSIONID", sessionId).
 
-
-        issueId = given().
+        issueKey = given().
                 header("Content-Type", "application/json").
                 header("Cookie", "JSESSIONID="+ sessionId).
-                //header("JSESSIONID", sessionId).
                 body(issueJson).
                 when().
                 post("/rest/api/2/issue").
                 then().
                 extract().
                 path("key");
+
+        given().
+                header("Content-Type", "application/json").
+                header("Cookie", "JSESSIONID="+ sessionId).
+                body(issueJson).
+                when().
+                delete("/rest/api/2/issue/" + issueKey).
+                then();
 
     }
 

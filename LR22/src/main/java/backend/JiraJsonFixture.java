@@ -13,6 +13,7 @@ public class JiraJsonFixture {
     }
 
     public String generateJSONForIssue(){
+        JSONObject issueData = new JSONObject();
         JSONObject fields = new JSONObject();
         JSONObject project = new JSONObject();
         JSONObject issuetype = new JSONObject();
@@ -24,13 +25,15 @@ public class JiraJsonFixture {
         assignee.put("name", "gubernatorova.sn");
         reporter.put("name", "gubernatorova.sn");
 
-        fields.put("projects", project);
+        fields.put("project", project);
         fields.put("summary", "something's wrong Snizhanna-test");
         fields.put("issuetype", issuetype);
         fields.put("assignee", assignee);
         fields.put("reporter", reporter);
 
+        issueData.put("fields", fields);
+
         //fields.putAll(projects);
-        return fields.toString();
+        return issueData.toString();
     }
 }
